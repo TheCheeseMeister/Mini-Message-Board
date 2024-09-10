@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <h1>Index</h1>
+        <p>This is the index!</p>
+
+        <% messages.forEach((message) => { %>
+            <p><%= message.text %></p>
+            <p><%= message.user %></p>
+            <p><%= message.added %></p>
+        <% }) %>
+
+        <a href="/new">Add a new message here!</a>
+    </body>
+</html>
