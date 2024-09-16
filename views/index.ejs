@@ -7,9 +7,13 @@
         <h1>Message Board</h1>
         
         <div class="message-container">
+            <% if (messages.length == 0) { %>
+                <p>There are no messages yet.</p>
+            <% } %>
+            
             <% messages.forEach((message, index) => { %>
                 <div class="message">
-                    <p><%= message.user %> <%= message.added %></p>
+                    <p><%= message.name %> <%= message.date %></p>
                     <p><%= message.text %></p>
     
                     <form method="POST" action="/message/<%= index %>">
