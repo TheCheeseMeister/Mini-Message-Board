@@ -16,6 +16,7 @@ async function findMessage(index) {
 
 async function clearMessages() {
     await pool.query("DELETE FROM messages");
+    await pool.query("ALTER SEQUENCE messages_id_seq RESTART");
 }
 
 module.exports = {
